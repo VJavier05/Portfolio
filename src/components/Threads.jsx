@@ -153,11 +153,17 @@ const Threads = ({ color = [1, 1, 1], amplitude = 1, distance = 0, enableMouseIn
 
     function resize() {
       const { clientWidth, clientHeight } = container;
-      renderer.setSize(clientWidth, clientHeight);
-      program.uniforms.iResolution.value.r = clientWidth;
-      program.uniforms.iResolution.value.g = clientHeight;
-      program.uniforms.iResolution.value.b = clientWidth / clientHeight;
+      const dpr = Math.min(window.devicePixelRatio, 2); // cap at 2 for performance
+
+      renderer.setSize(clientWidth * dpr, clientHeight * dpr);
+      gl.canvas.style.width = clientWidth + "px";
+      gl.canvas.style.height = clientHeight + "px";
+
+      program.uniforms.iResolution.value.r = clientWidth * dpr;
+      program.uniforms.iResolution.value.g = clientHeight * dpr;
+      program.uniforms.iResolution.value.b = (clientWidth * dpr) / (clientHeight * dpr);
     }
+
     window.addEventListener('resize', resize);
     resize();
 
