@@ -2,6 +2,7 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import TiltedCard from "../components/TiltedCard";
+import myPhoto from "../assets/me.jpeg";
        
 export default function AboutSection() {
   return (
@@ -56,7 +57,7 @@ export default function AboutSection() {
                   </p>
                 </div>
 
-                <div className="flex flex-col items-start border-l border-white/10 pl-6">
+                <div className="flex flex-col items-center border-l border-white/10 pl-6">
                   <h3 className="text-5xl md:text-6xl font-bold text-cyan-400">8+</h3>
                   <p className="text-white/80 text-sm md:text-base font-medium mt-2">
                     UI/UX Designs
@@ -74,7 +75,7 @@ export default function AboutSection() {
                 viewport={{ once: true }}
               >
               <TiltedCard
-                imageSrc="https://images.unsplash.com/photo-1615109398623-88346a601842?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=387"
+                imageSrc={myPhoto}
                 altText="Kendrick Lamar - GNX Album Cover"
                 captionText="Kendrick Lamar - GNX"
                 containerHeight="520px"

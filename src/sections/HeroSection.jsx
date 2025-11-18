@@ -26,7 +26,7 @@ export default function HeroSection() {
         id="home"
       >
         {/* Background animated threads (lazy-loaded) */}
-        {/* {inView && (
+        {inView && (
           <Threads
             color={[0.9, 0.9, 0.9]}
             amplitude={2.5}
@@ -34,7 +34,7 @@ export default function HeroSection() {
             enableMouseInteraction={false}
             className="absolute inset-0"
           />
-        )} */}
+        )}
 
         {/* Foreground animated content */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none space-y-8">
@@ -68,7 +68,7 @@ export default function HeroSection() {
                   "UI/UX Designer",
                 ]}
                 mainClassName="text-white"
-                staggerFrom="last"
+                staggerFrom="first"
                 initial={{ y: "100%", opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: "-120%", opacity: 0 }}
