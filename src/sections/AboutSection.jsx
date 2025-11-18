@@ -58,7 +58,7 @@ export default function AboutSection() {
                 </div>
 
                 <div className="flex flex-col items-center border-l border-white/10 pl-6">
-                  <h3 className="text-5xl md:text-6xl font-bold text-cyan-400">8+</h3>
+                  <h3 className="text-5xl md:text-6xl font-bold text-cyan-400">6+</h3>
                   <p className="text-white/80 text-sm md:text-base font-medium mt-2">
                     UI/UX Designs
                   </p>

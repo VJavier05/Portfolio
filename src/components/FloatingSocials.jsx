@@ -4,14 +4,21 @@ export default function FloatingSocials() {
   return (
     <div
       className="
-        fixed bottom-6 right-6 z-50
-        flex flex-col items-center gap-3
-        bg-black/40 backdrop-blur-xl
-        p-3
-        rounded-4xl
-        border border-white/10
-        shadow-lg
-      "
+    fixed z-50
+    bottom-6
+    left-1/2 transform -translate-x-1/2 md:left-auto md:right-6 md:transform-none
+    flex flex-row md:flex-col
+    items-center
+    gap-3
+    bg-black/40 backdrop-blur-xl
+    p-3
+    rounded-4xl
+    border border-white/10
+    shadow-lg
+    w-max
+    /* small screens: shift 20px to the right */
+    sm:translate-x-[10%]
+  "
     >
       {/* GitHub */}
       <a
