@@ -71,7 +71,7 @@ const projects = [
     category: "projects",
     description:
       "A simple and organized library system that helps users track books, manage records, and handle borrowing activities with ease.",
-    tech: ["PHP", "TKinter"],
+    tech: ["Python", "TKinter","MySQL"],
     thumbnail: "/projects/lb1.png",
     images: [
     "/projects/lb1.png",
