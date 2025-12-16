@@ -47,7 +47,7 @@ export default function FloatingSocials() {
 
       {/* LinkedIn */}
       <a
-        href="https://www.linkedin.com/in/vincent-angelo-javier"
+        href="https://www.linkedin.com/in/vincent-angelo-javier-839241382"
         target="_blank"
         className="
           p-2 rounded-full transition-all
