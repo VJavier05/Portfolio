@@ -160,6 +160,7 @@ export default function ProjectsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: false }}
           className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-gilroy mb-4">
@@ -201,6 +202,7 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: false }}
             >
               <SpotlightCard
                 className="h-full bg-neutral-900/80 backdrop-blur-xl p-6 rounded-3xl group hover:shadow-cyan-500/20 hover:scale-[1.02] transition-all duration-300 border border-white/5"
