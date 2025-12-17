@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import SpotlightCard from "../components/SpotlightCard";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, X } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import SpotlightCard from "../components/SpotlightCard";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -24,7 +24,6 @@ const projects = [
     "/projects/h2.png",
     "/projects/h3.png"
     ],
-    link: "#",
   },
    {
     title: "E-commerce Website",
@@ -38,7 +37,6 @@ const projects = [
     "/projects/ecom2.png",
     "/projects/ecom3.png"
     ],
-    link: "#",
   },
 
   {
@@ -52,7 +50,6 @@ const projects = [
     "/projects/ss1.png",
     "/projects/ss2.png",
     ],
-    link: "#",
   },
   {
     title: "Agriculture Management System",
@@ -64,7 +61,6 @@ const projects = [
     images: [
     "/projects/agri1.png",
     ],
-    link: "#",
   },
   {
     title: "Library System",
@@ -78,7 +74,6 @@ const projects = [
     "/projects/lb2.png",
     "/projects/lb3.png"
     ],
-    link: "#",
   },
     {
     title: "Barangay Record Management System",
@@ -92,9 +87,22 @@ const projects = [
     "/projects/sk1.png",
     "/projects/sk2.png"
     ],
-    link: "#",
   },
   // Example designs
+  {
+    title: "Book Rental Website",
+    category: "designs",
+    description: "A static book rental website integrated with the Google Sheets API, allowing seamless and real-time inventory updates.",
+    tech: ["Figma", "Canva","Google Sheet API","TypeScript","Tailwind"],
+    thumbnail: "/designs/br1.png",
+    images: [
+    "/designs/br2.png",
+    "/designs/br3.png",
+    "/designs/br4.png",
+    "/designs/br5.png",
+    ],
+    link: "https://spelledbypaperbacksph.vercel.app",
+  },
   {
     title: "Coffee Shop Website",
     category: "designs",
@@ -106,7 +114,7 @@ const projects = [
     "/designs/2.png",
     "/designs/3.png"
     ],
-    link: "#",
+    link: "https://www.figma.com/design/siImBnjF1cuVvj1PFNqi7q/Coffee-Shop?node-id=0-1&t=rdjQ43WPkuwhhSu3-1",
   },
   {
     title: "Patient Hospital App",
@@ -119,7 +127,7 @@ const projects = [
     "/designs/hs2.png",
     "/designs/hs3.png"
     ],
-    link: "#",
+    link: "https://www.figma.com/design/hepKsei4hi1yKB6hP6gEoN/Hospital-App?node-id=0-1&t=YYi0USDZflAZSk80-1",
   },
    
   {
@@ -133,8 +141,9 @@ const projects = [
     "/designs/s2.png",
     "/designs/s3.png"
     ],
-    link: "#",
+    link: "https://www.figma.com/design/exug7CD7p46Kjhb0kV7NKN/Restaurant?node-id=0-1&t=vJqSZsUnruzPhEa8-1",
   },
+
 ];
 
 export default function ProjectsSection() {
@@ -196,8 +205,8 @@ export default function ProjectsSection() {
               <SpotlightCard
                 className="h-full bg-neutral-900/80 backdrop-blur-xl p-6 rounded-3xl group hover:shadow-cyan-500/20 hover:scale-[1.02] transition-all duration-300 border border-white/5"
               >
-                <div className="flex flex-col h-full justify-between">
-                  <div>
+                <div className="flex flex-col h-full">
+                  <div className="flex-1">
                     {/* Thumbnail */}
                     <div
                       onClick={() => setActiveProject(project)}
@@ -228,6 +237,20 @@ export default function ProjectsSection() {
                       ))}
                     </div>
                   </div>
+
+                  {/* Conditional Link */}
+                  {project.link && project.link !== "#" && (
+                    <div className="mt-3 pt-4 border-t border-white/10">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                      >
+                        View Project <ArrowRight size={16} />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </SpotlightCard>
             </motion.div>
