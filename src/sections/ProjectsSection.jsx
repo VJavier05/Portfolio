@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 // Add a "category" property to each project (default to "projects")
 const projects = [
     {
-    title: "Victoria HRIS",
+    title: "HRSync HRIS",
     category: "projects",
     description:
       "A Human Resource Information System for employee management, leave tracking, performance evaluation and other HR process.",
@@ -24,6 +24,7 @@ const projects = [
     "/projects/h2.png",
     "/projects/h3.png"
     ],
+    link: "https://github.com/VJavier05/HRSync-HRIS",
   },
    {
     title: "E-commerce Website",
@@ -37,6 +38,7 @@ const projects = [
     "/projects/ecom2.png",
     "/projects/ecom3.png"
     ],
+    link: "https://github.com/VJavier05/SheWear-E-commerce-Website",
   },
 
   {
@@ -50,6 +52,7 @@ const projects = [
     "/projects/ss1.png",
     "/projects/ss2.png",
     ],
+    link: "https://github.com/VJavier05/School-Permit-System-",
   },
   {
     title: "Agriculture Management System",
@@ -61,6 +64,7 @@ const projects = [
     images: [
     "/projects/agri1.png",
     ],
+    link: "https://github.com/VJavier05/Agriculture-Record-Management-System",
   },
   {
     title: "Library System",
@@ -74,6 +78,7 @@ const projects = [
     "/projects/lb2.png",
     "/projects/lb3.png"
     ],
+    link: "https://github.com/VJavier05/Library-System",
   },
     {
     title: "Barangay Record Management System",
@@ -87,8 +92,9 @@ const projects = [
     "/projects/sk1.png",
     "/projects/sk2.png"
     ],
+    link: "https://github.com/VJavier05/Barangay-Record-Management-System",
   },
-  // Example designs
+  // designs
   {
     title: "Book Rental Website",
     category: "designs",
@@ -102,6 +108,19 @@ const projects = [
     "/designs/br5.png",
     ],
     link: "https://spelledbypaperbacksph.vercel.app",
+  },
+  {
+    title: "Paperie Custom Club",
+    category: "designs",
+    description: "A printing website to strengthen the brand’s online presence and effectively showcase its products, services, and overall visual identity.",
+    tech: ["Figma", "Canva","React","Tailwind"],
+    thumbnail: "/designs/pc1.png",
+    images: [
+    "/designs/pc2.png",
+    "/designs/pc3.png",
+    "/designs/pc4.png",
+    ],
+    link: "https://paperiecustomclub.vercel.app",
   },
   {
     title: "Coffee Shop Website",
@@ -352,6 +371,18 @@ export default function ProjectsSection() {
             </span>
           ))}
         </div>
+
+        {/* View Project Button */}
+        {activeProject.link && (
+          <a
+            href={activeProject.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center mt-1 gap-2 w-full px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+          >
+            View Project <ArrowRight size={16} />
+          </a>
+        )}
       </motion.div>
     </motion.div>
   )}
