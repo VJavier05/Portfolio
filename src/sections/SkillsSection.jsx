@@ -76,7 +76,7 @@ function SkillsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <h2 className="text-4xl md:text-5xl font-gilroy font-bold mb-4">
             My <span className="text-cyan-400">Skillset</span>
@@ -143,7 +143,7 @@ const SkillCategory = React.memo(function SkillCategory({
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="flex items-center gap-3 mb-6">
         <span className={`${iconColor} text-2xl`}>{icon}</span>
@@ -162,7 +162,7 @@ const SkillCategory = React.memo(function SkillCategory({
         }}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
 
         {skills.map((skill, i) => (

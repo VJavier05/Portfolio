@@ -109,7 +109,7 @@ export default function CertificatesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-gilroy mb-4">
@@ -128,7 +128,7 @@ export default function CertificatesSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8 xl:gap-12"
               >
                 {/* Number */}
@@ -203,7 +203,7 @@ export default function CertificatesSection() {
                   initial={{ opacity: 0, scaleX: 0 }}
                   whileInView={{ opacity: 1, scaleX: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.05 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   className="mt-16 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
                 />
               )}

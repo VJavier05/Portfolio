@@ -14,7 +14,6 @@ export default function HeroSection() {
 
   const { ref: heroRef, inView } = useInView({  
     threshold: 0.3,
-    triggerOnce: true,
   });
 
   return (
