@@ -11,7 +11,8 @@ export default function Navbar() {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
-    { label: "Project", href: "#projects" },
+    { label: "Projects", href: "#projects" },
+    { label: "Certificates", href: "#certificates" },
   ];
 
   // click handler: prevent default, smooth scroll, set active immediately

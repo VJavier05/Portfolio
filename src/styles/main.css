@@ -219,3 +219,18 @@ body {
 .animate-slideDown {
   animation: slideDown 0.25s ease-out;
 }
+
+/* Modal scrollbar styling */
+.modal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-scrollbar::-webkit-scrollbar-track {
+  background: #000000;
+}
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+.modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}

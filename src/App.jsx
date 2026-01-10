@@ -10,6 +10,7 @@ import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import SkillsSection from "./sections/SkillsSection";
 import ProjectsSection from "./sections/ProjectsSection";
+import CertificatesSection from "./sections/CertificatesSection";
 
 
 export default function App() {
@@ -39,6 +40,8 @@ export default function App() {
         <SkillsSection />
         
         <ProjectsSection />
+        
+        <CertificatesSection />
         
       </main>
        <Footer />
