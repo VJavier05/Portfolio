@@ -5,97 +5,119 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Award, Eye, X, Calendar } from "lucide-react";
 
 const certificates = [
+   {
+    title: "Artificial Intelligence Fundamentals",
+    issuer: "IBM SkillsBuild",
+    date: "Jan 2026",
+    description: "This course covered key AI concepts such as NLP, computer vision, deep learning, and AI ethics, helping build a strong foundation in artificial intelligence.",
+    image: "/certificates/IBMDesign.png",
+    verifyUrl: "https://www.credly.com/badges/8ad1b0da-b983-4359-b952-156963f38ff0/linked_in_profile"
+  },
   {
     title: "Introduction to Modern AI",
     issuer: "Cisco Networking Academy",
     date: "Dec 2025",
     description: "Learn to use AI in your daily life, craft effective chatbot prompts, and use computer vision and machine translation.",
-    image: "/certificates/Introduction_to_Modern_AI_certificate_angelojavierjj-gmail-com_1f969efe-2287-424e-8278-f57ef83c1819-1.png"
+    image: "/certificates/Introduction_to_Modern_AI_certificate_angelojavierjj-gmail-com_1f969efe-2287-424e-8278-f57ef83c1819-1.png",
+    verifyUrl: "https://www.credly.com/badges/bed28f5d-98f0-47a7-bb46-7ffc87cc65c5"
   },
   {
     title: "Linux Essentials Certification",
     issuer: "Cisco Networking Academy",
     date: "Nov 2025",
     description: "Covers fundamental Linux concepts, command-line usage, file management, and basic system administration skills.",
-    image: "/certificates/Linux_Essentials_certificate_angelojavierjj-gmail-com_8bd0f988-e7e6-4935-9caa-e9774817803c (1)-1.png"
+    image: "/certificates/Linux_Essentials_certificate_angelojavierjj-gmail-com_8bd0f988-e7e6-4935-9caa-e9774817803c (1)-1.png",
+    verifyUrl: "https://www.credly.com/badges/9c7e0b24-9e3c-42f8-991c-23b73283927a"
   },
   {
     title: "Stay Safe Online: Cyber Security Basics ''Take Control of Your Online Security'",
     issuer: "ICT Literacy and Competency Development Bureau",
     date: "Oct 2025",
     description: "Emphasizes essential cybersecurity habits to help individuals protect themselves from online threats and cyberattacks.",
-    image: "/certificates/Stay Safe Online_ Cyber Security Basics-1.png"
+    image: "/certificates/Stay Safe Online_ Cyber Security Basics-1.png",
+    verifyUrl: "https://drive.google.com/file/d/1R-rmrDMKo0FZETlYX3ld8idlYh8D-ggy/view?usp=sharing"
   },
   {
     title: "Data Privacy Awareness",
     issuer: "DICT - CAR",
     date: "Oct 2025",
     description: "Highlights the importance of data privacy, legal considerations, and responsible handling of personal and sensitive information.",
-    image: "/certificates/Data Privacy Awareness-1.png"
+    image: "/certificates/Data Privacy Awareness-1.png",
+    verifyUrl: "drive.google.com/file/d/13-4hJ9DmtfG04UmDzm67FsqoSJlsEsa3/view?usp=sharing"
   },
   {
     title: "Cybersecurity for ICT Professionals",
     issuer: "DICT– Catanduanes",
     date: "Oct 2025",
     description: "Provides practical cybersecurity knowledge tailored for ICT professionals, including risk management and security best practices.",
-    image: "/certificates/Cybersecurity for ICT-1.png"
+    image: "/certificates/Cybersecurity for ICT-1.png",
+    verifyUrl: "https://drive.google.com/file/d/1YUdvfSqeLOFlVdcSBbugvkZscxfbzWFL/view?usp=sharing"
   },
   {
     title: "DESIGN THINKING PROCESS",
     issuer: "ICT Industry Development Bureau",
     date: "Oct 2025",
     description: "Explores a user-centered approach to problem-solving through empathy, ideation, prototyping, and testing.",
-    image: "/certificates/DESIGN THINKING PROCESS-1.png"
+    image: "/certificates/DESIGN THINKING PROCESS-1.png",
+    verifyUrl: "https://drive.google.com/file/d/1CEl40FGVdEm4tldU_LZ12s3UWkv4Ru4d/view"
   },
   {
     title: "Digital Safety and Security Awareness",
     issuer: "Cisco Networking Academy",
     date: "Oct 2025",
     description: "Professional PFocuses on safe online practices, identifying digital risks, and protecting personal information in the digital environment.",
-    image: "/certificates/Digital_Safety_and_Security_Awareness_certificate_angelojavierjj-gmail-com_40d8ccbc-4485-4c83-8a03-a02eda3857b8-1.png"
+    image: "/certificates/Digital_Safety_and_Security_Awareness_certificate_angelojavierjj-gmail-com_40d8ccbc-4485-4c83-8a03-a02eda3857b8-1.png",
+    verifyUrl: "https://www.credly.com/badges/310d64d2-1fb2-49ed-8b8f-0dfcf25a4be2"
   },
   {
     title: "Introduction to Cybersecurity",
     issuer: "Cisco Networking Academy",
     date: "Oct 2025",
     description: "Introduces key cybersecurity concepts, common threats, and basic strategies for protecting systems and data.",
-    image: "/certificates/Introduction_to_Cybersecurity_certificate_angelojavierjj-gmail-com_2ad90679-5224-4f3e-8ed3-c7ca36ad22ab-1.png"
+    image: "/certificates/Introduction_to_Cybersecurity_certificate_angelojavierjj-gmail-com_2ad90679-5224-4f3e-8ed3-c7ca36ad22ab-1.png",
+    verifyUrl: "https://www.credly.com/badges/2c949681-41f8-402a-ac72-f2dda58f9388"
   },
   {
     title: "Operating Systems Basics",
     issuer: "Cisco Networking Academy",
     date: "Oct 2025",
     description: "Explains the core functions of operating systems, including process management, memory usage, file systems, and user interaction.",
-    image: "/certificates/Operating_Systems_Basics_certificate_angelojavierjj-gmail-com_54604997-baef-4b8d-88fd-7cf4f35567a7 (1)-1.png"
+    image: "/certificates/Operating_Systems_Basics_certificate_angelojavierjj-gmail-com_54604997-baef-4b8d-88fd-7cf4f35567a7 (1)-1.png",
+    verifyUrl: "https://www.credly.com/badges/a2e80bb5-54fc-4098-839a-327d2b6a7cf7"
   },
   {
     title: "Build Python Web Apps with Flask",
     issuer: "DICT - ICT Literacy and Competency Development Bureau",
     date: "Nov 2024",
     description: "Teaches how to develop simple and dynamic web applications using Python and the Flask framework.",
-    image: "/certificates/Build Python Web Apps with Flask-1.png"
+    image: "/certificates/Build Python Web Apps with Flask-1.png",
+    verifyUrl: "https://courses.buri.io/view/user/certificate/c6e57385-7eed-4401-987f-3ebe94899739/pdf"
   },
   {
     title: "DICT-WD003 Basic Javascript for Web Development",
     issuer: "DICT - ICT Literacy and Competency Development Bureau",
     date: "Apr 2024",
     description: "Provides an introduction to JavaScript, enabling learners to add interactivity and basic functionality to web pages.",
-    image: "/certificates/DICT-WD003 Basic Javascript for Web Development-1.png"
+    image: "/certificates/DICT-WD003 Basic Javascript for Web Development-1.png",
+    verifyUrl: "https://drive.google.com/file/d/1FUCEbrCZ1a7oFOUDrUAoiI5b-fPE8dGC/view"
   },
   {
     title: "DICT-WD002 Using HTML and CSS to Design a Website",
     issuer: "DICT - ICT Literacy and Competency Development Bureau",
     date: "Feb 2024",
     description: "Covers the use of HTML and CSS to create visually appealing and responsive website layouts with proper styling techniques.",
-    image: "/certificates/DICT-WD002 Using HTML and CSS to Design a Website-1.png"
+    image: "/certificates/DICT-WD002 Using HTML and CSS to Design a Website-1.png",
+    verifyUrl: "https://drive.google.com/file/d/1LAYIOUfr3YxIBozxmaforMbDgsiWKKs0/view"
   },
   {
     title: "DICT-WD001 Principles of Web Development and Introduction to HTML",
     issuer: "DICT - ICT Literacy and Competency Development Bureau",
     date: "Feb 2024",
     description: "Introduces the fundamentals of web development, focusing on how websites work and the basic structure of web pages using HTML.",
-    image: "/certificates/DICT-WD001 Principles of Web Development and Introduction to HTML-1.png"
+    image: "/certificates/DICT-WD001 Principles of Web Development and Introduction to HTML-1.png",
+    verifyUrl: "https://drive.google.com/file/d/1_n_lzKdEyDySmMYsSA2KJNJ6An2yIi7q/view"
   },
+ 
 ];
 
 export default function CertificatesSection() {
@@ -181,7 +203,18 @@ export default function CertificatesSection() {
 
                   {/* Title */}
                   <h3 className="text-xl md:text-2xl lg:text-2xl xl:text-3xl font-bold text-white mb-3 lg:mb-4 leading-tight">
-                    {cert.title}
+                    {cert.verifyUrl && cert.verifyUrl !== "#" ? (
+                      <a 
+                        href={cert.verifyUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer underline decoration-transparent hover:decoration-cyan-400"
+                      >
+                        {cert.title}
+                      </a>
+                    ) : (
+                      cert.title
+                    )}
                   </h3>
 
                   {/* Date */}
