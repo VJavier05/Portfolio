@@ -11,6 +11,7 @@ import AboutSection from "./sections/AboutSection";
 import SkillsSection from "./sections/SkillsSection";
 import ProjectsSection from "./sections/ProjectsSection";
 import CertificatesSection from "./sections/CertificatesSection";
+import ContactSection from "./sections/ContactSection";
 
 
 export default function App() {
@@ -42,6 +43,8 @@ export default function App() {
         <ProjectsSection />
         
         <CertificatesSection />
+        
+        <ContactSection />
         
       </main>
        <Footer />

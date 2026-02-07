@@ -13,6 +13,7 @@ export default function Navbar() {
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Certificates", href: "#certificates" },
+    { label: "Contact", href: "#contact" },
   ];
 
   // click handler: prevent default, smooth scroll, set active immediately
@@ -45,65 +46,44 @@ export default function Navbar() {
 
   // Robust IntersectionObserver to set active link without flicker
   useEffect(() => {
-  const sectionEls = links
-    .map((l) => {
-      const section = document.querySelector(l.href);
-      if (!section) return null;
-      // observe section and its children
-      return [section, ...Array.from(section.querySelectorAll("div"))];
-    })
-    .flat()
-    .filter(Boolean);
+    const sections = links.map((l) => document.querySelector(l.href)).filter(Boolean);
+    if (!sections.length) return;
 
-  if (!sectionEls.length) return;
+    let debounceTimer;
+    const observer = new IntersectionObserver(
+      () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          // Get all sections and their positions
+          const sectionPositions = sections.map((section) => ({
+            id: section.id,
+            top: section.getBoundingClientRect().top,
+            bottom: section.getBoundingClientRect().bottom,
+          }));
 
-  const MIN_RATIO = 0.05;
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries.filter((e) => e.isIntersecting);
-      if (visible.length === 0) return;
+          // Find the section closest to the top of viewport (but still visible)
+          const current = sectionPositions.find(
+            (s) => s.top <= 150 && s.bottom > 150
+          ) || sectionPositions.find((s) => s.top > 0);
 
-      visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-      const best = visible[0];
+          if (current) {
+            const match = links.find((l) => l.href === `#${current.id}`);
+            if (match && latestActiveRef.current !== match.label) {
+              latestActiveRef.current = match.label;
+              setActive(match.label);
+            }
+          }
+        }, 100);
+      },
+      { rootMargin: "0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
 
-      if (best.intersectionRatio < MIN_RATIO) return;
-
-      const sec = best.target.closest("section[id]");
-      if (!sec) return;
-
-      const match = links.find((l) => l.href === `#${sec.id}`);
-      if (match && latestActiveRef.current !== match.label) {
-        latestActiveRef.current = match.label;
-        setActive(match.label);
-      }
-    },
-    {
-      root: null,
-      rootMargin: "-20% 0px -20% 0px",
-      threshold: [0, 0.05, 0.1, 0.25, 0.5, 0.75, 1],
-    }
-  );
-
-  sectionEls.forEach((el) => observer.observe(el));
-
-  // initial check
-  const initCheck = () => {
-    const x = window.innerWidth / 2;
-    const y = window.innerHeight * 0.45;
-    const el = document.elementFromPoint(x, y);
-    const sec = el?.closest && el.closest("section[id]");
-    if (sec) {
-      const m = links.find((l) => l.href === `#${sec.id}`);
-      if (m) {
-        latestActiveRef.current = m.label;
-        setActive(m.label);
-      }
-    }
-  };
-  initCheck();
-
-  return () => observer.disconnect();
-}, [links]);
+    sections.forEach((el) => observer.observe(el));
+    return () => {
+      clearTimeout(debounceTimer);
+      observer.disconnect();
+    };
+  }, [links]);
 
 
   // Sync on hashchange (optional; keeps state consistent if navigation changes hash externally)
