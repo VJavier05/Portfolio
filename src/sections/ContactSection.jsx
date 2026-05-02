@@ -17,7 +17,7 @@ export default function ContactSection() {
       title: "Resume",
       description: "Download PDF",
       link: "/RESUME.pdf",
-      iconColor: "text-blue-500",
+      iconColor: "text-white",
       download: true
     },
     {
@@ -32,7 +32,7 @@ export default function ContactSection() {
       title: "LinkedIn",
       description: "Let's connect",
       link: "https://www.linkedin.com/in/vincent-angelo-javier-839241382/",
-      iconColor: "text-blue-500"
+      iconColor: "text-white"
     }
   ];
 
@@ -66,14 +66,29 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="lg:w-1/2 bg-black backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 group flex flex-col"
           >
-            <div className="bg-neutral-800 p-4 rounded-xl w-fit mb-6 group-hover:bg-cyan-500/10 transition-colors">
+            <div className="bg-neutral-800 p-4 rounded-xl w-fit mb-6 group-hover:bg-cyan-500/80 transition-colors">
               <Mail className="text-white" size={24} />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-2">{contactOptions[0].title}</h3>
             <p className="text-white/60 mb-6 text-lg">{contactOptions[0].description}</p>
-            <div className="mt-auto bg-white text-black rounded-xl px-6 py-4 flex items-center justify-between hover:bg-white/90 transition-colors font-medium">
-              <span>{contactOptions[0].action}</span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="mt-auto bg-white text-black rounded-xl px-6 py-4 flex items-center justify-between font-medium 
+              transition-all duration-300 
+              hover:bg-white/90 
+              hover:shadow-lg 
+              hover:-translate-y-0.5 
+              active:scale-[0.98] 
+              cursor-pointer group"
+            >
+              <span className="transition-transform duration-300 group-hover:translate-x-0.5">
+                {contactOptions[0].action}
+              </span>
+
+              <svg
+                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-cyan-500"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </div>
@@ -92,8 +107,8 @@ export default function ContactSection() {
               className="sm:col-span-2 bg-black backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 group text-center"
             >
               <div className="flex flex-col items-center">
-                <div className="bg-neutral-800 p-4 rounded-xl mb-4 group-hover:bg-cyan-500/10 transition-colors">
-                  <FileText className="text-blue-500" size={24} />
+                <div className="bg-neutral-800 p-4 rounded-xl mb-4 group-hover:bg-cyan-500/80 transition-colors">
+                  <FileText className="text-white" size={24} />
                 </div>
                 <h3 className="text-lg font-bold mb-1">{contactOptions[1].title}</h3>
                 <p className="text-white/60 text-sm">{contactOptions[1].description}</p>
@@ -116,7 +131,7 @@ export default function ContactSection() {
                   className="bg-black backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 group text-center"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="bg-neutral-800 p-4 rounded-xl mb-4 group-hover:bg-cyan-500/10 transition-colors">
+                    <div className="bg-neutral-800 p-4 rounded-xl mb-4 group-hover:bg-cyan-500/80 transition-colors">
                       <Icon className={option.iconColor} size={24} />
                     </div>
                     <h3 className="text-lg font-bold mb-1">{option.title}</h3>

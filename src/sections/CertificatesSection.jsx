@@ -6,6 +6,15 @@ import { Award, Eye, X, Calendar } from "lucide-react";
 
 const certificates = [
    {
+    title: "IT Specialist - Software Development",
+    issuer: "Certiport, a Pearson VUE business",
+    date: "April 2026",
+    description: "Demonstrates strong foundational skills in software development, including object-oriented programming, web applications, and database management, with experience in C# and ANSI SQL.",
+    image: "/certificates/its-softwaredev.png",
+    verifyUrl: "https://www.credly.com/badges/7d595686-e6b6-4942-9363-746b4b373d99"
+  },
+
+   {
     title: "Artificial Intelligence Fundamentals",
     issuer: "IBM SkillsBuild",
     date: "Jan 2026",
