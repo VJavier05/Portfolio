@@ -1,18 +1,15 @@
 
+import { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
-import Threads from "./components/Threads";
-import BlurText from "./components/BlurText";       
-import RotatingText from "./components/RotatingText";
 import ScrollVelocity from "./components/ScrollVelocity";
-import FloatingSocials from "./components/FloatingSocials";
 import ChatMe from "./components/ChatMe";
 import Footer from "./components/Footer";
 import HeroSection from "./sections/HeroSection";
-import AboutSection from "./sections/AboutSection";
-import SkillsSection from "./sections/SkillsSection";
-import ProjectsSection from "./sections/ProjectsSection";
-import CertificatesSection from "./sections/CertificatesSection";
-import ContactSection from "./sections/ContactSection";
+const AboutSection = lazy(() => import("./sections/AboutSection"));
+const SkillsSection = lazy(() => import("./sections/SkillsSection"));
+const ProjectsSection = lazy(() => import("./sections/ProjectsSection"));
+const CertificatesSection = lazy(() => import("./sections/CertificatesSection"));
+const ContactSection = lazy(() => import("./sections/ContactSection"));
 
 
 export default function App() {
@@ -36,16 +33,13 @@ export default function App() {
             />
         </div>
 
-        <AboutSection />
-
-        {/* ===== SKILLS SECTION ===== */}
-        <SkillsSection />
-        
-        <ProjectsSection />
-        
-        <CertificatesSection />
-        
-        <ContactSection />
+        <Suspense fallback={null}>
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <CertificatesSection />
+          <ContactSection />
+        </Suspense>
         
       </main>
        <Footer />

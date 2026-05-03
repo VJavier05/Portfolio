@@ -68,7 +68,7 @@ export default function AboutSection() {
               >
               <TiltedCard
                 imageSrc={myPhoto}
-                altText="Kendrick Lamar - GNX Album Cover"
+                altText="Vincent Angelo - Profile"
                 captionText="Kendrick Lamar - GNX"
                 containerHeight="520px"
                 containerWidth="420px"

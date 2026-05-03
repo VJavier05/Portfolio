@@ -176,6 +176,7 @@ export default function CertificatesSection() {
                     <img
                       src={cert.image}
                       alt={cert.title}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
                         e.target.src = `data:image/svg+xml;base64,${btoa(`

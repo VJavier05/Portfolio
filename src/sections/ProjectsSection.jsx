@@ -236,6 +236,7 @@ export default function ProjectsSection() {
                       <img
                         src={project.thumbnail}
                         alt="thumbnail"
+                        loading="lazy"
                         className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
@@ -325,6 +326,7 @@ export default function ProjectsSection() {
                 <img
                   src={img}
                   alt={`${activeProject.title} screenshot ${idx + 1}`}
+                  loading="lazy"
                   className="w-full h-64 object-cover rounded-lg border border-white/10"
                 />
               </SwiperSlide>
