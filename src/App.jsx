@@ -5,6 +5,7 @@ import BlurText from "./components/BlurText";
 import RotatingText from "./components/RotatingText";
 import ScrollVelocity from "./components/ScrollVelocity";
 import FloatingSocials from "./components/FloatingSocials";
+import ChatMe from "./components/ChatMe";
 import Footer from "./components/Footer";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
@@ -21,7 +22,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <FloatingSocials />
+       <ChatMe />
       <main className="min-h-screen">
 
       <HeroSection />

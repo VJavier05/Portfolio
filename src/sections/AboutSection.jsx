@@ -32,20 +32,12 @@ export default function AboutSection() {
               </h2>
 
                 <p className="text-lg md:text-xl text-white/85 font-gilroy font-medium leading-relaxed mb-8">
-                  I’m <span className="text-cyan-300 font-semibold">Javier</span> — a passionate Mobile & Web Developer who helps businesses and brands bring their ideas to life through clean, dynamic, and user-friendly applications. I specialize in building seamless digital experiences using <span className="text-cyan-400">Python</span>, <span className="text-cyan-400">C#</span>, <span className="text-cyan-400">Java</span>, <span className="text-cyan-400">Flask</span>, and <span className="text-cyan-400">Flutter</span>, backed by solid database expertise in <span className="text-cyan-400">MySQL</span> and <span className="text-cyan-400">SQLite</span>.
+                  I’m <span className="text-cyan-300 font-semibold">Javier</span> — a passionate Mobile & Web Developer who helps businesses and brands bring their ideas to life through clean, dynamic, and user-friendly applications. I specialize in building seamless digital experiences using <span className="text-cyan-400">Python, C#, Java, Flask, PHP and Flutter</span>, backed by solid database expertise in <span className="text-cyan-400">SQL, MySQL</span> and <span className="text-cyan-400">SQLite</span>.
                 </p>
 
                 <p className="text-base md:text-lg text-white/70 leading-relaxed mb-10">
                   Beyond functionality, I focus on UI/UX design to ensure every app isn’t just efficient but also engaging and intuitive for users. Whether it’s crafting a modern website, developing a mobile app, or designing a custom solution. If you’re looking for someone who can blend technical skills with creativity to deliver results, let’s build something amazing together.
                 </p>
-
-                {/* <a
-                  href="/resume.pdf"
-                  download
-                  className="inline-block bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 mb-10"
-                >
-                  Download Resume
-                </a> */}
 
 
               {/* Stats Section */}
