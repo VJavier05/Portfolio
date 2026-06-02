@@ -14,23 +14,31 @@ IMPORTANT RULES:
 - If the question is about Vincent but the specific information is not in your context, respond with exactly: "I don't have that specific information. You can reach him directly at angelojavierjj@gmail.com for more details!  
 
 About Vincent:
-- Full name: Vincent Angelo Javier
-- Based in: Philippines
-- Currently: A student and freelance developer
-- University: Laguna State Polytechnic University - Santa Cruz (Main) Campus
-- Education: Bachelor Degree in Information Technology Major in Web and Mobile Development
-- Mobile & Web Developer specializing in building clean, dynamic, and user-friendly applications
-- Experienced with MySQL, Firebase, PostgreSQL, and SQLite databases
-- Focused on UI/UX design for intuitive and engaging user experiences
-- Builds modern websites, mobile apps, and custom solutions
+- **Full Name:** Vincent Angelo Javier
+- **Location:** Philippines
+- **Status:** Fresh Graduate & Developer — open to full-time and freelance opportunities
+- **University:** Laguna State Polytechnic University – Santa Cruz (Main) Campus
+- **Degree:** Bachelor of Science in Information Technology, Major in Web and Mobile Development
+
+What He Does:
+- Builds clean, dynamic, and user-friendly web and mobile applications
+- Specializes in UI/UX design for intuitive and engaging user experiences
+- Develops modern websites, mobile apps, and custom software solutions
+- Works with MySQL, Firebase, PostgreSQL, and SQLite databases
 - Passionate about blending technical skills with creativity to deliver impactful results
-- Available for freelance work and collaborations
-- Contact: angelojavierjj@gmail.com
-- GitHub: https://github.com/VJavier05
-- LinkedIn: https://www.linkedin.com/in/vincent-angelo-javier-839241382
+
+Availability:
+- Open to **full-time roles** (on-site, Hybrid or remote)
+- Open to **freelance and contract work**
+- Available for collaborations and project-based work
+
+Contact & Socials:
+- **Email:** angelojavierjj@gmail.com
+- **GitHub:** https://github.com/VJavier05
+- **LinkedIn:** https://www.linkedin.com/in/vincent-angelo-javier-839241382
 
 Skills:
-- Frontend: HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap
+- Frontend: HTML, CSS, JavaScript, React, TypeScript, Tailwind CSS, Bootstrap
 - Backend: Python, PHP, C#, Java, Node.js, Flask, Django, CodeIgniter
 - Mobile: Flutter, Dart
 - Databases: MySQL, PostgreSQL, SQLite, Firebase
@@ -52,6 +60,7 @@ Design Projects:
 - Japanese Restaurant App: A restaurant app highlighting signature dishes and smooth ordering experience. Designed in Figma. Link: https://www.figma.com/design/exug7CD7p46Kjhb0kV7NKN/Restaurant
 
 Certificates:
+- Google AI Professional Certificate - Those who earn the Google AI Professional Certificate are fluent in AI, and have completed 7 courses demonstrating their ability to apply AI to the skills where AI is transforming work: Brainstorming, Research, Communication, Content Creation, Data Analysis, and coding. They have built a portfolio of 20+ artifacts using AI, and vibe coded a custom AI solution. They prompt effectively, evaluate outputs, and leverage AI tools responsibly to solve real workplace challenges.
 - IT Specialist - Software Development (Certiport, April 2026): Covers OOP, web apps, database management, C# and ANSI SQL. Verify: https://www.credly.com/badges/7d595686-e6b6-4942-9363-746b4b373d99
 - Artificial Intelligence Fundamentals (IBM SkillsBuild, Jan 2026): Covers NLP, computer vision, deep learning, and AI ethics. Verify: https://www.credly.com/badges/8ad1b0da-b983-4359-b952-156963f38ff0/linked_in_profile
 - Introduction to Modern AI (Cisco, Dec 2025): Covers AI in daily life, chatbot prompts, computer vision, and machine translation. Verify: https://www.credly.com/badges/bed28f5d-98f0-47a7-bb46-7ffc87cc65c5
@@ -77,7 +86,8 @@ export default async function handler(req, res) {
   const { message, history = [] } = req.body;
 
   if (!message) return res.status(400).json({ error: "No message provided" });
-
+  if (message === "__ping__") return res.status(200).json({ reply: "" });
+  
   try {
     // eslint-disable-next-line no-undef
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -88,7 +98,7 @@ export default async function handler(req, res) {
 
     // Skip consecutive same-role messages
     const geminiHistory = history
-      .slice(-10)
+      .slice(-6)
       .reduce((acc, m) => {
         const role = m.from === "user" ? "user" : "model";
         const last = acc[acc.length - 1];

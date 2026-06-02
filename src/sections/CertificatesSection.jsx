@@ -5,6 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Award, Eye, X, Calendar } from "lucide-react";
 
 const certificates = [
+
+  {
+    title: "Google AI Professional Certificate",
+    issuer: "Coursera",
+    date: "May 2026",
+    description: "Those who earn the Google AI Professional Certificate are fluent in AI, and have completed 7 courses demonstrating their ability to apply AI to the skills where AI is transforming work: Brainstorming, Research, Communication, Content Creation, Data Analysis, and coding. They have built a portfolio of 20+ artifacts using AI, and vibe coded a custom AI solution. They prompt effectively, evaluate outputs, and leverage AI tools responsibly to solve real workplace challenges.",
+    image: "/certificates/google_ai2.png",
+    verifyUrl: "https://www.credly.com/badges/5751bc93-2505-4a25-a4bb-19b9ca9dd7e1"
+  },
+
+
    {
     title: "IT Specialist - Software Development",
     issuer: "Certiport, a Pearson VUE business",
