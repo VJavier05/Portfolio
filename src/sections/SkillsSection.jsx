@@ -51,11 +51,12 @@ const mobileSkills = [
 
 const designSkills = [
   { imageSrc: "/icons/figma.svg", label: "Figma", type: "Design Tool" },
-  { icon: UiIcon, label: "UI/UX Strategy", type: "Design", color: "#FF5722" },
   { imageSrc: "/icons/vscode.svg", label: "VS Code", type: "Tool" },
   { imageSrc: "/icons/git.svg", label: "GIT", type: "Version Control" },
   { imageSrc: "/icons/github.svg", label: "GitHub", type: "Collaboration Platform" },
   { imageSrc: "/icons/vite.svg", label: "Vite", type: "Build Tool" },
+  { imageSrc: "/icons/docker.svg", label: "Docker", type: "Container" },
+
 
 ];
 

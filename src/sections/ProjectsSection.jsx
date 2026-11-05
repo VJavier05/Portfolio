@@ -98,6 +98,21 @@ const projects = [
   {
     title: "Book Rental Website",
     category: "designs",
+    description: "I redesigned the Marci Metzger Home section to create a cleaner, more engaging digital presence.",
+    tech: ["React", "TypeScript","Tailwind"],
+    thumbnail: "/designs/marci1.png",
+    images: [
+    "/designs/marci1.png",
+    "/designs/marci2.png",
+    "/designs/marci3.png",
+    "/designs/marci4.png",
+    "/designs/marci5.png",
+    ],
+    link: "https://marci-metzgerhomes.vercel.app",
+  },
+  {
+    title: "Book Rental Website",
+    category: "designs",
     description: "A static book rental website integrated with the Google Sheets API, allowing seamless and real-time inventory updates.",
     tech: ["Figma", "Canva","Google Sheet API","TypeScript","Tailwind"],
     thumbnail: "/designs/br1.png",

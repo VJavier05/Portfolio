@@ -16,7 +16,7 @@ export default function ContactSection() {
       icon: FileText,
       title: "Resume",
       description: "Download PDF",
-      link: "/RESUME.pdf",
+      link: "/Vincent-Javier_Resume.pdf",
       iconColor: "text-white",
       download: true
     },
@@ -99,7 +99,7 @@ export default function ContactSection() {
             {/* Resume - Takes full width */}
             <motion.a
               href={contactOptions[1].link}
-              download="Resume.pdf"
+              download="Vincent-Javier_Resume.pdf"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
