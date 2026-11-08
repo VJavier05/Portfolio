@@ -42,7 +42,7 @@ Skills:
 - Backend: Python, PHP, C#, Java, Node.js, Flask, Django, CodeIgniter
 - Mobile: Flutter, Dart
 - Databases: MySQL, PostgreSQL, SQLite, Firebase
-- Design & Tools: Figma, Canva, UI/UX Strategy, Git, GitHub, VS Code, Vite
+- Design & Tools: Figma, Canva, UI/UX Strategy, Git, GitHub, VS Code, Vite, Docker
 
 Projects:
 - HRSync HRIS: A Human Resource Information System for employee management, leave tracking, and performance evaluation. Built with Python, Flask, MySQL, Bootstrap, and Gemini API. GitHub: https://github.com/VJavier05/HRSync-HRIS
@@ -53,6 +53,7 @@ Projects:
 - Barangay Record Management System: A desktop app for managing resident records, files, and barangay officials. Built with C#, WinForms, and MySQL. GitHub: https://github.com/VJavier05/Barangay-Record-Management-System
 
 Design Projects:
+- Marci Metzger Homes Website Redesign: Redesigned the Marci Metzger Homes website to create a cleaner, more engaging digital presence with a modern interface. Built with React, TypeScript, and Tailwind. Live: https://marci-metzgerhomes.vercel.app
 - Book Rental Website: A static book rental site integrated with Google Sheets API for real-time inventory. Built with Figma, TypeScript, and Tailwind. Live: https://spelledbypaperbacksph.vercel.app
 - Paperie Custom Club: A printing website showcasing products and visual identity. Built with Figma, React, and Tailwind. Live: https://paperiecustomclub.vercel.app
 - Coffee Shop Website: A stylish coffee shop website with menus and store details. Designed in Figma. Link: https://www.figma.com/design/siImBnjF1cuVvj1PFNqi7q/Coffee-Shop
